@@ -67,6 +67,7 @@ const Description = styled(motion.div)`
 
 function GameDetail() {
   const { screen, game } = useSelector((state) => state.detail)
+  
   return (
     <CardShadow>
       <Detail>
