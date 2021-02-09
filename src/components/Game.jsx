@@ -21,17 +21,18 @@ const StyledGame = styled(motion.div)`
 `
 
 function Game({ name, released, image, id }) {
+  const stringPathId = id.toString()
   const dispatch = useDispatch()
   const loadDetailHandler = () => {
     document.body.style.overflow = 'hidden'
     dispatch(loadDetail(id))
   }
   return (
-    <StyledGame onClick={loadDetailHandler}>
+    <StyledGame layoutId={stringPathId} onClick={loadDetailHandler}>
       <Link to={`/game/${id}`}>
-        <h3>{name}</h3>
+        <motion.h3 layoutId={`title ${stringPathId}`}>{name}</motion.h3>
         <p>{released}</p>
-        <img src={image} alt={name} />
+        <motion.img layoutId={`image ${stringPathId}`} src={image} alt={name} />
       </Link>
     </StyledGame>
   )
