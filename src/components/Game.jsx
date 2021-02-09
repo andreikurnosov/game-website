@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
 import { loadDetail } from './../actions/detailAction'
 import { Link } from 'react-router-dom'
+// import { smallImage } from './../util'
 
 const StyledGame = styled(motion.div)`
   min-height: 30vh;
